@@ -6,33 +6,74 @@
     <title>SparkPro Cleaning | Vancouver Exterior Property Maintenance</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        body { color: #333; background: #fff; }
+        body { color: #333; background: #fff; line-height: 1.6; -webkit-text-size-adjust: 100%; }
+        
+        /* Navigation & Strip */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
         .logo { font-size: 24px; font-weight: bold; color: #1b4d3e; white-space: nowrap; }
-        nav ul { display: flex; list-style: none; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        nav ul { display: flex; list-style: none; }
         nav ul li { margin-left: 20px; white-space: nowrap; }
-        nav ul li a { text-decoration: none; color: #555; font-weight: 600; }
+        nav ul li a { text-decoration: none; color: #555; font-weight: 600; font-size: 16px; }
         .quote-btn { background: #1b4d3e; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s; white-space: nowrap; margin-left: 20px; }
         .quote-btn:hover { background: #12352b; }
-        .hero { display: flex; align-items: center; padding: 80px 10%; background: #f4f7f6; min-height: 70vh; }
-        .hero-text { flex: 1; padding-right: 50px; }
-        .hero-text h1 { font-size: 44px; color: #1b4d3e; margin-bottom: 20px; line-height: 1.2; }
-        .hero-text p { font-size: 18px; margin-bottom: 30px; line-height: 1.6; color: #555; }
+        .contact-strip { background: #1b4d3e; color: white; padding: 15px 10%; text-align: center; font-weight: 600; font-size: 15px; }
+        .contact-strip a { color: white; margin: 0 10px; text-decoration: none; display: inline-block; }
+        
+        /* Hero Section */
+        .hero { display: flex; align-items: center; padding: 80px 10%; background: #f4f7f6; min-height: 70vh; gap: 40px; }
+        .hero-text { flex: 1; }
+        .hero-text h1 { font-size: 46px; color: #1b4d3e; margin-bottom: 20px; line-height: 1.2; }
+        .hero-text p { font-size: 19px; margin-bottom: 30px; color: #555; }
         .hero-image { flex: 1; background: #e2e8f0; height: 400px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-weight: bold; color: #666; border: 2px dashed #cbd5e1; }
-        .contact-strip { background: #1b4d3e; color: white; padding: 15px 10%; text-align: center; font-weight: 600; }
-        .contact-strip a { color: white; margin: 0 15px; text-decoration: none; }
-        @media (max-width: 768px) {
-            nav { padding: 15px 5%; flex-wrap: wrap; gap: 10px; }
-            nav ul { width: 100%; order: 3; padding: 10px 0; border-top: 1px solid #eee; justify-content: space-around; }
-            nav ul li { margin: 0; }
-            .hero { flex-direction: column; padding: 40px 5%; text-align: center; }
-            .hero-text { padding-right: 0; margin-bottom: 30px; }
+        
+        /* Why Choose Us Section */
+        .features-section { padding: 80px 10%; text-align: center; background: #fff; }
+        .features-section h2 { color: #1b4d3e; font-size: 36px; margin-bottom: 15px; }
+        .section-subtitle { color: #666; font-size: 18px; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .features-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
+        .feature-card { background: #f8fafc; padding: 35px 25px; border-radius: 8px; width: 320px; text-align: left; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border-top: 4px solid #1b4d3e; }
+        .feature-card h3 { color: #1b4d3e; margin-bottom: 15px; font-size: 20px; }
+        .feature-card p { color: #555; font-size: 15px; }
+
+        /* Process Section */
+        .process-section { padding: 80px 10%; background: #f4f7f6; text-align: center; }
+        .process-section h2 { color: #1b4d3e; font-size: 36px; margin-bottom: 60px; }
+        .process-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .process-step { width: 320px; background: #fff; padding: 35px 25px; border-radius: 8px; position: relative; box-shadow: 0 2px 4px rgba(0,0,0,0.02); text-align: left; }
+        .step-number { position: absolute; top: -20px; left: 25px; background: #1b4d3e; color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 18px; }
+        .process-step h3 { color: #1b4d3e; margin-top: 10px; margin-bottom: 15px; font-size: 20px; }
+        .process-step p { color: #555; font-size: 15px; }
+
+        /* Banner Section */
+        .assurance-banner { padding: 80px 10%; background: #1b4d3e; color: white; text-align: center; }
+        .max-content { max-width: 800px; margin: 0 auto; }
+        .assurance-banner h2 { font-size: 36px; margin-bottom: 20px; }
+        .assurance-banner p { font-size: 18px; line-height: 1.8; opacity: 0.9; margin-bottom: 35px; }
+
+        /* Footer */
+        footer { background: #1a1a1a; color: white; text-align: center; padding: 30px; font-size: 14px; }
+        
+        /* Premium Mobile Adaptation Settings */
+        @media (max-width: 900px) {
+            nav { padding: 15px 5%; flex-direction: column; gap: 15px; text-align: center; }
+            nav ul { width: 100%; justify-content: center; padding: 5px 0; }
+            nav ul li { margin: 0 12px; }
+            .quote-btn { margin-left: 0; width: 100%; max-width: 280px; text-align: center; }
+            .contact-strip { padding: 12px 5%; font-size: 14px; }
+            .contact-strip a { margin: 5px 10px; }
+            .hero { flex-direction: column; padding: 40px 5%; text-align: center; gap: 30px; }
             .hero-text h1 { font-size: 32px; }
-            .hero-image { width: 100%; height: 250px; }
+            .hero-text p { font-size: 17px; }
+            .hero-image { width: 100%; height: 260px; }
+            .features-section, .process-section, .assurance-banner { padding: 60px 5%; }
+            .features-section h2, .process-section h2, .assurance-banner h2 { font-size: 28px; }
+            .section-subtitle, .assurance-banner p { font-size: 16px; }
+            .feature-card, .process-step { width: 100%; max-width: 400px; }
         }
     </style>
 </head>
 <body>
+
     <nav>
         <div class="logo">SparkPro Cleaning</div>
         <ul>
@@ -42,17 +83,72 @@
         </ul>
         <a href="contact.html" class="quote-btn">Get a Free Quote</a>
     </nav>
+
     <div class="contact-strip">
         Call For a Free Quote: <a href="tel:6728221832">672-822-1832</a> | <a href="tel:6722385370">672-238-5370</a>
     </div>
+
+    <!-- Hero -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Professional Exterior Property Care in Vancouver.</h1>
-            <p>Keep your property safe from the BC weather. We specialize in top-tier roofing, gutter, and window cleaning that protects your home and keeps it looking brand new.</p>
+            <h1>Expert Exterior Cleaning Across the Lower Mainland.</h1>
+            <p>Keep your property safe from heavy West Coast weather elements. We specialize in top-tier roofing, gutter, and window cleaning that protects your home value and restores its premium look.</p>
             <a href="contact.html" class="quote-btn">Get a Free Quote</a>
         </div>
         <div class="hero-image">[Upload Your Main Before/After Photo Here]</div>
     </section>
+
+    <!-- Why Choose Us -->
+    <section class="features-section">
+        <h2>Engineered for Premium Property Protection</h2>
+        <p class="section-subtitle">We don't just blast away dirt. We use tailored outdoor cleaning treatments designed specifically to extend the life of your home's structural exterior layers.</p>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Fully Insured & Certified</h3>
+                <p>Our technicians follow strict safety codes. Your home, roof shingles, and property infrastructure are entirely protected during every single stage of our cleaning deployment.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Pro Grade Infrastructure</h3>
+                <p>We leverage advanced high-reach pure water fed poles and gentle soft-wash solutions to achieve flawless cleaning finishes without risking heavy structural damage.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Straightforward Communication</h3>
+                <p>No unexpected surcharges, no hidden fees, and no high-pressure upsells. You receive clear pricing details up front alongside friendly local family service.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="process-section">
+        <h2>How We Deliver Excellence</h2>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Detailed Assessment</h3>
+                <p>We review your window, gutter, or roof structure carefully to identify blockages, debris, or moss issues before quoting.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Precision Cleaning</h3>
+                <p>Our dedicated crew handles the removal, washdown, and flush operations seamlessly, treating your home like our own.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Final Quality Assurance</h3>
+                <p>We execute a complete final walk-through inspection to guarantee a spotless finish before clearing our equipment.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="assurance-banner">
+        <div class="max-content">
+            <h2>Ready to Restore Your Property's Shine?</h2>
+            <p>From clearing deep winter gutter blockages to stripping away thick structural roof moss, SparkPro Cleaning is built to deliver clean outcomes across Vancouver, Burnaby, Richmond, Surrey, and the entire Lower Mainland region. Let our family business make your property stand out today.</p>
+            <a href="contact.html" class="quote-btn" style="background: white; color: #1b4d3e;">Get a Free Quote Now</a>
+        </div>
+    </section>
+
     <footer><p>&copy; 2026 SparkPro Cleaning. All Rights Reserved.</p></footer>
 </body>
 </html>
