@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services | SparkPro Cleaning</title>
+    <title>Our Services & Pricing | SparkPro Cleaning</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .logo { font-size: 24px; font-weight: bold; color: #1b4d3e; }
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 20px; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        .logo { font-size: 24px; font-weight: bold; color: #1b4d3e; white-space: nowrap; }
+        nav ul { display: flex; list-style: none; overflow-x: auto; }
+        nav ul li { margin-left: 20px; white-space: nowrap; }
         nav ul li a { text-decoration: none; color: #555; font-weight: 600; }
-        .quote-btn { background: #1b4d3e; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+        .quote-btn { background: #1b4d3e; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; white-space: nowrap; margin-left: 20px; }
         .container { padding: 60px 10%; text-align: center; }
         h1 { color: #1b4d3e; margin-bottom: 10px; font-size: 36px; }
         .subtitle { color: #666; margin-bottom: 40px; font-size: 18px; }
         .grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-        .card { background: #f8fafc; padding: 30px; border-radius: 8px; width: 320px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-align: left; border-top: 4px solid #1b4d3e; }
-        .card h3 { color: #1b4d3e; margin-bottom: 15px; font-size: 20px; }
+        .card { background: #f8fafc; padding: 30px; border-radius: 8px; width: 320px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); text-align: left; border-top: 4px solid #1b4d3e; position: relative; }
+        .card h3 { color: #1b4d3e; margin-bottom: 10px; font-size: 20px; }
+        .price-tag { font-size: 22px; font-weight: bold; color: #1b4d3e; margin-bottom: 15px; display: block; }
         .card p { color: #555; line-height: 1.5; font-size: 15px; }
+        .combo-box { background: #e6f4f0; border: 2px dashed #1b4d3e; padding: 30px; margin-top: 40px; border-radius: 8px; font-size: 18px; font-weight: 600; color: #1b4d3e; }
         .service-areas { background: #f4f7f6; padding: 40px 10%; margin-top: 50px; border-radius: 8px; }
         .service-areas h2 { color: #1b4d3e; margin-bottom: 15px; }
         .area-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; font-weight: 600; color: #555; }
         footer { background: #1a1a1a; color: white; text-align: center; padding: 30px; margin-top: 60px; font-size: 14px; }
+        @media (max-width: 768px) {
+            nav { padding: 15px 5%; flex-wrap: wrap; gap: 10px; }
+            nav ul { width: 100%; order: 3; padding: 10px 0; border-top: 1px solid #eee; justify-content: space-around; }
+            nav ul li { margin: 0; }
+            .container { padding: 40px 5%; }
+        }
     </style>
 </head>
 <body>
@@ -33,28 +41,34 @@
             <li><a href="services.html">Services</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <a href="contact.html" class="quote-btn">Request a Quote</a>
+        <a href="contact.html" class="quote-btn">Get a Free Quote</a>
     </nav>
     <div class="container">
-        <h1>Specialized Exterior Care</h1>
-        <p class="subtitle">Heavy-duty outdoor detailing built to withstand Greater Vancouver weather.</p>
+        <h1>Straightforward Pricing & Services</h1>
+        <p class="subtitle">Reliable, professional outdoor maintenance built for Greater Vancouver properties.</p>
         <div class="grid">
             <div class="card">
-                <h3>Roof Demossing & Cleaning</h3>
-                <p>Safe moss removal, soft-washing treatments, and protective care to extend the life of your shingles and keep structural leaks away.</p>
+                <h3>Window Cleaning</h3>
+                <span class="price-tag">Starting at $150</span>
+                <p>Pure water exterior glass washing. We detail your window glass, frames, and screens, leaving a streak-free shine with zero residue left behind.</p>
             </div>
             <div class="card">
-                <h3>Gutter Clearout & Flushing</h3>
-                <p>Complete removal of debris, downspout testing, and safety flushing to prevent winter blockages and water pooling near your foundation.</p>
+                <h3>Gutter Clearout</h3>
+                <span class="price-tag">Starting at $140</span>
+                <p>Complete clearing of leaves and debris, downspout blockage checks, and safety water flushing to prevent water damage to your foundation.</p>
             </div>
             <div class="card">
-                <h3>Streak-Free Window Washing</h3>
-                <p>Pure water cleaning for high-reach exterior residential and commercial glass, frames, and screens without leaving residue.</p>
+                <h3>Roof Care & Demossing</h3>
+                <span class="price-tag">Call For Quote</span>
+                <p>Safe moss removal and gentle soft-washing treatments designed to protect your shingles and prevent structural roof leaks.</p>
             </div>
+        </div>
+        <div class="combo-box">
+            ✨ Combo Deals Available! Save money by grouping your services together. Call us today for a free quote.
         </div>
         <div class="service-areas">
             <h2>Our Service Coverage</h2>
-            <p style="margin-bottom: 20px; color:#666;">We proudly serve homeowners and property managers throughout the entire region:</p>
+            <p style="margin-bottom: 20px; color:#666;">We proudly serve homeowners and property managers across the entire lower mainland:</p>
             <div class="area-list">
                 <div>Vancouver</div>
                 <div>North Vancouver</div>
