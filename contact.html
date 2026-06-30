@@ -60,21 +60,23 @@
                 <a href="mailto:Sparkprocleaning.bc@gmail.com">✉️ Sparkprocleaning.bc@gmail.com</a>
             </div>
         </div>
-        <form>
+        
+        <!-- Formspree Activated Form -->
+        <form action="https://formspree.io/f/meeblobk" method="POST">
             <h2 style="color: #1b4d3e; margin-bottom: 10px;">Request a Quote</h2>
             <label>Your Name</label>
-            <input type="text" placeholder="Your Name" required>
+            <input type="text" name="name" placeholder="Your Name" required>
             <label>Phone Number</label>
-            <input type="tel" placeholder="604-000-0000" required>
+            <input type="tel" name="phone" placeholder="604-000-0000" required>
             <label>Service Needed</label>
-            <select>
-                <option>Window Washing (Starts at $150)</option>
-                <option>Gutter Cleaning (Starts at $140)</option>
-                <option>Roof Cleaning & Demossing</option>
-                <option>Multi-Service Combo Deal</option>
+            <select name="service">
+                <option value="Windows">Window Washing (Starts at $150)</option>
+                <option value="Gutters">Gutter Cleaning (Starts at $140)</option>
+                <option value="Roof Care">Roof Cleaning & Demossing</option>
+                <option value="Combo">Multi-Service Combo Deal</option>
             </select>
             <label>Message / Property Location</label>
-            <textarea rows="4" placeholder="Tell us a little bit about your project..." required></textarea>
+            <textarea name="message" rows="4" placeholder="Tell us a little bit about your project..." required></textarea>
             <button type="submit">Submit Quote Request</button>
         </form>
     </div>
